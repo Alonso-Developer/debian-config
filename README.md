@@ -8,4 +8,3 @@ Config for debian 12 bookworm.
 + [swaylock](https://packages.debian.org/bookworm/swaylock)
 + [swayidle](https://packages.debian.org/bookworm/swayidle)
 + [xwayland](https://packages.debian.org/bookworm/xwayland)
-
