@@ -2,12 +2,12 @@
 	"actions": {
 		"on-click": "mode",
 		"on-scroll-up": "shift_up",
-		"on-scroll-down": "shift_down"
-	},
+		"on-scroll-down": "shift_down" },
 	"battery": {
 		"interval": 2,
 		"states": {
-			"warning": 30
+			"warning": 30,
+			"critical": 10
 		},
 		"format": "{icon}  {capacity}%",
 		"format-icons": ["", "", "", "", ""],

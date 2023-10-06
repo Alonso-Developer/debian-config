@@ -47,6 +47,10 @@ button:hover {
   background-color: #a58a00;
 }
 
+#battery.critical {
+	background-color: #dc1b1b;
+}
+
 #custom-updates {
   color: #1793d1;
   transition: 200ms linear;
