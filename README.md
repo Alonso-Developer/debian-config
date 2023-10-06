@@ -10,3 +10,5 @@ Config for debian 12 bookworm.
 + [xwayland](https://packages.debian.org/bookworm/xwayland)
 + [swayimg](https://packages.debian.org/bookworm/swayimg)
 + [brightnessctl](https://packages.debian.org/bookworm/brightnessctl)
++ [grim](https://packages.debian.org/sid/grim)
++ [slurp](https://packages.debian.org/bookworm/slurp)
