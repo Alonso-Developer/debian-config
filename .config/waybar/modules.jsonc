@@ -1,91 +1,109 @@
 {
-   "actions": {
-      "on-click": "mode",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-  },
-  "battery": {
-    "interval": 2,
-    "states": {
-      "warning": 30
-    },
-    "design-capacity": true,
-    "full-at": 100,
-    //
-    "format": "{icon}  {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "format-plugged": " {icon}  {capacity}%",
-    "format-charging": " {icon}  {capacity}%",
-    "format-time": "{H}:{m}",
-    "tooltip-format": "{time}"
-  },
-  "cpu": {
-    "interval": 2,
-    "format": "  {icon0}{icon1} {usage}%",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "states": []
-  },
-  "memory": {
-    "interval": 2,
-    "format": " {percentage}%",
-    "tooltip-format": "{used:0.1f}G/{total:0.1f}G"
-  },
-  "backlight": {
-    "interval": 60,
-    "format": "{icon} {percent}%",
-    "format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
-    "scroll-step": 0,
-    "tooltip": false
-  },
-  "disk": {
-    "interval": 60,
-    "format": " {used}/{free}",
-    "path": "/home",
-    "tooltip": false,
-    "states": []
-  },
-  "network": {
-    "interval": 2,
-    "format": "󰕒 {bandwidthUpBytes} 󰇚 {bandwidthDownBytes}",
-    "tooltip": false
-  },
-  "clock": {
-    "interval": 60,
-    "format": "{:%H:%M}",
-    "max-length": 25
-  },
-  "custom/updates": {
-    "format": "{icon}{}",
-    "return-type": "json",
-    "format-icons": {
-      "has-updates": " ",
-      "updated": "󰣇"
-    },
-    "exec-if": "which waybar-updates",
-    "exec": "waybar-updates"
-  },
-  "sway/window": {
-	"format": "{title}",
-	"max-length": 50
-  },
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": false,
-    "format": "{name}: {icon}",
-    "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "urgent": "",
-        "focused": "",
-        "default": "",
-    }
-  },
-  "sway/language": {
-	  "format": "{short}",
-  },
-  "clock": {
-    "interval": 60,
-    "format": "{:%H:%M | %Y-%m-%d}",
-  },
+	"actions": {
+		"on-click": "mode",
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down"
+	},
+	"battery": {
+		"interval": 2,
+		"states": {
+			"warning": 30
+		},
+		"format": "{icon}  {capacity}%",
+		"format-icons": ["", "", "", "", ""],
+		"format-plugged": " {icon}  {capacity}%",
+		"format-charging": " {icon}  {capacity}%",
+		"format-time": "{H}:{m}",
+		"tooltip-format": "{time}"
+	},
+	"cpu": {
+		"interval": 2,
+		"format": "  {icon0}{icon1} {usage}%",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"states": []
+	},
+	"memory": {
+		"interval": 2,
+		"format": " {percentage}%",
+		"tooltip-format": "{used:0.1f}G/{total:0.1f}G"
+	},
+	"backlight": {
+		"interval": 60,
+		"format": "{icon} {percent}%",
+		"format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
+		"scroll-step": 0,
+		"tooltip": false
+	},
+	"disk": {
+		"interval": 60,
+		"format": " {used}/{free}",
+		"path": "/home",
+		"tooltip": false,
+		"states": []
+	},
+	"network": {
+		"interval": 2,
+		"format": "󰕒 {bandwidthUpBytes} 󰇚 {bandwidthDownBytes}",
+		"tooltip": false
+	},
+	"clock": {
+		"interval": 60,
+		"format": "{:%H:%M}",
+		"max-length": 25
+	},
+	"custom/updates": {
+		"format": "{icon}{}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": " ",
+			"updated": "󰣇"
+		},
+		"exec-if": "which waybar-updates",
+		"exec": "waybar-updates"
+	},
+	"sway/window": {
+		"format": "{title}",
+		"max-length": 50
+	},
+	"sway/workspaces": {
+		"all-outputs": false,
+		"current-only": true,
+		"format": "{name}: {icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"urgent": "",
+			"focused": "",
+			"default": "",
+		}
+	},
+	"sway/language": {
+		"format": "{short}",
+	},
+	"clock": {
+		"interval": 60,
+		"format": "{:%H:%M | %Y-%m-%d}",
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+	"pulseaudio": {
+	    "format": "{volume}% {icon}",
+	    "format-bluetooth": "{volume}% {icon}",
+	    "format-muted": "",
+	    "format-icons": {
+		"headphone": "",
+		"hands-free": "",
+		"headset": "",
+		"phone": "",
+		"portable": "",
+		"car": "",
+		"default": ["", ""]
+	    },
+	    "scroll-step": 1,
+	    "on-click": "pavucontrol",
+	    "ignored-sinks": ["Easy Effects Sink"]
+	}
 }

@@ -10,13 +10,15 @@
   "modules-left": [
      "sway/window",
      "sway/workspaces",
-     "clock"
+     "clock",
+     "tray"
   ],
   "modules-right": [
     "battery",
     "cpu",
     "memory",
     "backlight",
+    "pulseaudio",
     "disk",
     "network",
     "sway/language",
