@@ -12,3 +12,6 @@ Config for debian 12 bookworm.
 + [brightnessctl](https://packages.debian.org/bookworm/brightnessctl)
 + [grim](https://packages.debian.org/sid/grim)
 + [slurp](https://packages.debian.org/bookworm/slurp)
++ [xsel](https://packages.debian.org/bookworm/xsel)
++ [wofi](https://packages.debian.org/bookworm/wofi)
++ [dunst](https://packages.debian.org/stable/dunst)
