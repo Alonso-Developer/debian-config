@@ -70,4 +70,44 @@ button:hover {
   padding: 0 6px 0 4px;
 }
 
+#workspaces {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #303030;
+  border-radius: 6px;
+  padding: 0 6px;
+}
 
+#workspaces > button {
+  padding: 0;
+  margin: 0;
+  padding: 4px 6px;
+  border-radius: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: transparent;
+}
+
+#workspaces > button:hover {
+  background-color: #303030;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+#workspaces > button.focused {
+  background-color: #606060;
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom-color: #ca7896;
+}
+
+#workspaces > button.urgent {
+  background-color: transparent;
+  border-top-color: #ca7896;
+}

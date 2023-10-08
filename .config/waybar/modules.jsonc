@@ -67,7 +67,7 @@
 	},
 	"sway/workspaces": {
 		"all-outputs": false,
-		"current-only": true,
+		"current-only": false,
 		"format": "{name}: {icon}",
 		"format-icons": {
 			"1": "",
@@ -76,7 +76,7 @@
 			"urgent": "",
 			"focused": "",
 			"default": "",
-		}
+		},
 	},
 	"sway/language": {
 		"format": "{short}",
