@@ -1,0 +1,12 @@
+show=drun
+width=80%
+prompt=
+allow_images=true
+hide_scroll=true
+matching=fuzzy
+insensitive=true
+location=center
+lines=8
+sort_order=default
+image_size=12
+dynamic_lines=true
