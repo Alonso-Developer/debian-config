@@ -15,7 +15,8 @@ Config for debian 12 bookworm.
 + [dunst](https://packages.debian.org/stable/dunst)
 + [pulseaudio](https://packages.debian.org/bookworm/pulseaudio)
 + [flatpak](https://packages.debian.org/bookworm/flatpak)
-
++ [qtwayland5](https://packages.debian.org/bookworm/qtwayland5)
++ [qt6-wayland](https://packages.debian.org/bookworm/qt6-wayland)
 # Apps:
 + [vlc](https://packages.debian.org/bookworm/vlc)
 + [firefox](https://flathub.org/apps/org.mozilla.firefox)
