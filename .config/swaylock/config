@@ -1,0 +1,5 @@
+no-unlock-indicator
+color=000000
+ignore-empty-password
+image=~/.config/swaylock/logo.png
+scaling=center
