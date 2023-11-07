@@ -8,10 +8,12 @@
   "passthrough": false,
   "gtk-layer-shell": true,
   "modules-left": [
-     "sway/window",
-     "sway/workspaces",
-     "clock",
-     "tray"
+    "sway/mode",
+    "sway/window",
+    "sway/workspaces",
+    "clock",
+    "tray",
+    "wlr/taskbar",
   ],
   "modules-right": [
     "battery",
@@ -22,6 +24,8 @@
     "disk",
     "network",
     "sway/language",
+    "bluetooth",
+    "privacy",
   ],
   "include": ["~/.config/waybar/modules.jsonc"]
 }
