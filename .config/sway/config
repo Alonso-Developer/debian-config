@@ -36,21 +36,22 @@ output WL-1 {
 	mode 1920x1080
 }
 ### Idle configuration
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock'
+
 exec kitty
 # exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # exec systemctl --user stop pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
 # exec systemctl --user start pipewire-media-session
 #
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 #
@@ -162,8 +163,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 
 # Screenshots:
-bindsym Print exec grim -t png ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
-bindsym $mod+Print exec grim -t png -g "$(slurp)" ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
+bindsym Print exec grim -g "$(slurp)" - | wl-copy
+bindsym Shift+Print exec grim - | wl-copy
+bindsym $mod+Print exec grim -t png ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png
 
 # Layout stuff:
 #
