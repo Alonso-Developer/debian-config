@@ -35,6 +35,7 @@ output * bg ./background.png fill
 output WL-1 {
 	mode 1920x1080
 }
+
 ### Idle configuration
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -46,7 +47,6 @@ exec swayidle -w \
          timeout 1000 'swaylock' \
          timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock'
-
 exec kitty
 # exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # exec systemctl --user stop pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
@@ -237,7 +237,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 50; done
 
     colors {
         statusline #ffffff
