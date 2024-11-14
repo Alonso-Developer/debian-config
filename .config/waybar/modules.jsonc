@@ -37,9 +37,8 @@
 	"disk": {
 		"interval": 60,
 		"format": " {used}/{free}",
-		"path": "/home",
-		"tooltip": false,
-		"states": []
+		"path": "/root",
+		"unit": "GB",
 	},
 	"network": {
 		"interval": 2,
